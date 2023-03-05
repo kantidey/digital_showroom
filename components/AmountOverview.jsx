@@ -56,7 +56,7 @@ export default function AccountOverview({ data }) {
               Due
             </Typography>
             secondary=<Typography component="h4" variant="bold">
-              {`${data ? (data.totalDueOnSell ? data.totalDueOnSell : 0) : 0}`}$
+              {`${data ? (data.totalDueOnSell ? data.totalDueOnSell : 0) : 0}`}৳
             </Typography>
           />
         </ListItem>
@@ -88,7 +88,7 @@ export default function AccountOverview({ data }) {
                     : 0
                   : 0
               } `}
-              $
+              ৳
             </Typography>
           />
         </ListItem>
@@ -112,7 +112,7 @@ export default function AccountOverview({ data }) {
               Balance
             </Typography>
             secondary=<Typography component="h4" variant="bold">
-              {`${data ? (data.balance ? data.balance : 0) : 0}`} $
+              {`${data ? (data.balance ? data.balance : 0) : 0}`} ৳
             </Typography>
           />
         </ListItem>
