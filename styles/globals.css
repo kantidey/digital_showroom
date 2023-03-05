@@ -1,0 +1,49 @@
+.styleTextField {
+  background-color: #f4f4f4;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.navItem {
+  color: gray;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+
+.heroBg {
+}
+a {
+  text-decoration: none;
+}
+.groupItem {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: #f3ecea;
+  transition: all 0.5s;
+}
+
+.groupItem:hover {
+  transform: scale(1.1);
+}
+
+.eventsImg {
+  width: 300px;
+  height: 300px;
+  transition: all 0.5s;
+}
+.eventsImg:hover {
+  transition: all 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+.hoverAnimations {
+  background-color: #f3ecea;
+  transition: all 0.5s;
+}
+
+.hoverAnimations:hover {
+  transform: scale(1.1);
+}

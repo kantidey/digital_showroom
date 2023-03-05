@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Showroom {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  vat     Int @default(0)
+  discount Int @default(0)
+}
+
+model User {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  email    String @unique
+  password String
+}
+
+model Product {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  productName  String
+  photo        String
+  code         String   @unique
+  brand        String
+  price        Int
+  category     Category @relation(fields: [categoryName], references: [categoryName], onDelete: Cascade)
+  categoryName String
+  createdAt    DateTime @default(now())
+}
+
+model Sell {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  amount Int @default(0)
+}
+
+model SellOnDue {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  customerName  String
+  customerPhone String
+  amount        Int
+  createdAt     DateTime @default(now())
+}
+
+model Category {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  categoryName String    @unique
+  product      Product[]
+}
+
+model Withdraw {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  amount    Int
+  createdAt DateTime @default(now())
+}
+
+model UtilityCost {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  costTitle String
+  amount    Int
+  createdAt DateTime @default(now())
+}
