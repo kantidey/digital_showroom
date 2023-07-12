@@ -1,12 +1,11 @@
 import * as React from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from "@mui/icons-material/Edit";
 import Payment from "@mui/icons-material/Payment";
 import DeleteIcon from "@mui/icons-material/Delete";
+import PictureAsPdf from "@mui/icons-material/PictureAsPdf";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -73,7 +72,7 @@ export default function ManageInstalment({ data }) {
       {
         field: "id",
         headerName: "Action",
-        width: "150",
+        width: "200",
         renderCell: (params) => {
           return (
             <ButtonGroup>
@@ -102,6 +101,23 @@ export default function ManageInstalment({ data }) {
               >
                 <EditIcon />
               </IconButton>
+              <IconButton
+                variant="contained"
+                color="secondary"
+                onClick={() =>
+                  router.push(
+                    `/dashboard/customer-due/pdf?id=${
+                      params.row.id
+                    }&customerName=${params.row.customerName}&customerPhone=${
+                      params.row.customerPhone
+                    }&amount=${params.row.amount}&date=${moment(
+                      params.row.createdAt
+                    ).format("YY-MM-DD")}`
+                  )
+                }
+              >
+                <PictureAsPdf />
+              </IconButton>{" "}
               <IconButton
                 variant="contained"
                 color="error"

@@ -3,7 +3,7 @@ import { prisma } from "../../utils/db.ts";
 const handler = nc();
 handler.get(async (req, res) => {
   try {
-    
+   
     const sell = await prisma.Sell.findMany({
       select: {
         amount: true,
@@ -30,7 +30,6 @@ handler.get(async (req, res) => {
     const totalDueOnSell = sellOnDue.reduce((a, c) => a + c.amount, 0);
 
     res.send({
-      
       totalSell: totalCashOnSell + totalDueOnSell,
       totalWithdraw,
       totalUtilityCost,

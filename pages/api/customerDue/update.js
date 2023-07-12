@@ -6,7 +6,7 @@ handler.put(async (req, res) => {
   try {
     await prisma.SellOnDue.update({
       where: {
-        id: req.body.id,
+        id: req.query.id,
       },
       data: req.body,
     });

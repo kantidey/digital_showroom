@@ -1,6 +1,6 @@
 import nc from "next-connect";
 import bcryptjs from "bcryptjs";
-import { prisma } from "../../../../utils/db";
+import { prisma } from "../../../../utils/db.ts";
 import { userSignToken } from "../../../../utils/auth.js";
 const handler = nc();
 handler.post(async (req, res, next) => {

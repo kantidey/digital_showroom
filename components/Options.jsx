@@ -34,7 +34,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Dashboard</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Dashboard</ListItemText>
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
@@ -48,7 +48,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Sell Product</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Sell Product</ListItemText>
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
@@ -62,7 +62,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Customer Due</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Customer Due</ListItemText>
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
@@ -76,7 +76,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Product</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Product</ListItemText>
         </ListItemButton>
       </ListItem>
 
@@ -93,7 +93,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Category</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Category</ListItemText>
         </ListItemButton>
       </ListItem>
 
@@ -108,7 +108,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Withdraw</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Withdraw</ListItemText>
         </ListItemButton>
       </ListItem>
 
@@ -123,7 +123,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Utility Cost</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Utility Cost</ListItemText>
         </ListItemButton>
       </ListItem>
       <ListItem disablePadding>
@@ -137,10 +137,12 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Set Vat & Discount</ListItemText>
+          <ListItemText sx={{ color: "white" }}>
+            Set Vat & Discount
+          </ListItemText>
         </ListItemButton>
       </ListItem>
-   
+
       <ListItem disablePadding>
         <ListItemButton onClick={() => setOpen(!open)}>
           <ListItemIcon>
@@ -152,7 +154,7 @@ export default function Options() {
               alt="icon"
             />
           </ListItemIcon>
-          <ListItemText>Settings</ListItemText>
+          <ListItemText sx={{ color: "white" }}>Settings</ListItemText>
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
       </ListItem>
@@ -174,7 +176,7 @@ export default function Options() {
                 alt="icon"
               />
             </ListItemIcon>
-            <ListItemText primary="Change password" />
+            <ListItemText sx={{ color: "white" }} primary="Change password" />
           </ListItemButton>
           <ListItemButton
             sx={{ pl: 4 }}
@@ -193,7 +195,7 @@ export default function Options() {
                 alt="icon"
               />
             </ListItemIcon>
-            <ListItemText primary="Logout" />
+            <ListItemText sx={{ color: "white" }} primary="Logout" />
           </ListItemButton>
         </List>
       </Collapse>

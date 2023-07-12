@@ -16,7 +16,7 @@ export default function CreateUtilityForm() {
   const [amount, setAmount] = useState();
   const [amountInputError, setAmountInputError] = useState();
   const [titleInputError, setTitleInputError] = useState();
-      const [userInfo] = useLocalStorage("userInfo");
+  const [userInfo] = useLocalStorage("userInfo");
 
   const router = useRouter();
   const handelSubmit = async (e) => {

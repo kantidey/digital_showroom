@@ -22,12 +22,14 @@ export default function Layout({ pageTitle, children }) {
       <Head>
         <title>{pageTitle ? pageTitle : "Admin Dashboard"}</title>
       </Head>
+
       <Stack direction={{ xs: "column", sm: "row", md: "row" }}>
         <Paper
           sx={{
             display: { xs: "none", sm: "none", md: "block" },
             width: "250px",
             minHeight: "100vh",
+            backgroundColor: "#EE6C4D",
           }}
         >
           <Box
@@ -46,7 +48,8 @@ export default function Layout({ pageTitle, children }) {
         <Container
           sx={{
             flex: 1,
-            p: { xs: "5px", sm: "10px", md: "30px" },
+            p: { xs: "5px", sm: "30px", md: "50px" },
+            background: "#EAEAEA",
           }}
         >
           <Typography
@@ -62,22 +65,34 @@ export default function Layout({ pageTitle, children }) {
             sx={{
               px: { xs: "5px", sm: "30px", md: "80px" },
               py: "30px",
-              borderTop: "3px solid #FEB330",
+              borderRadius: "50px",
             }}
-            elevation={1}
+            elevation={0}
           >
             <Typography
               variant="bold"
               component="h1"
               align="center"
-              sx={{ color: "gray", mb: "25px" }}
+              sx={{
+                color: "gray",
+                mb: "25px",
+                borderRadius: "4px",
+                fontSize: "35",
+                fontWeight: "900",
+              }}
             >
               {router.asPath == "/dashboard" ? null : pageTitle}
             </Typography>
+            <Divider
+              sx={{ display: router.asPath == "/dashboard" ? "none" : "block" }}
+            />
+            <br />
+
             {children}
           </Paper>
         </Container>
       </Stack>
+
       {/* for mobile */}
       <Drawer open={open} onClose={() => setOpen(!open)}>
         <UserProfile />

@@ -15,7 +15,7 @@ export default function CreateServicesForm({ data }) {
   const [id] = useState(data.id);
   const [customerName, setCustomerName] = useState(data.customerName);
   const [customerPhone, setCustomerPhone] = useState(data.customerPhone);
-      const [userInfo] = useLocalStorage("userInfo");
+  const [userInfo] = useLocalStorage("userInfo");
 
   const router = useRouter();
   const handelSubmit = async (e) => {
@@ -23,12 +23,8 @@ export default function CreateServicesForm({ data }) {
     e.target.reset();
     setOpen(true);
     const { data } = await axios.put(
-      `/api/customerDue/update`,
-      {
-        id,
-        customerName,
-        customerPhone,
-      },
+      `/api/customerDue/update?id=${id}`,
+      { customerName, customerPhone },
       {
         headers: {
           authorization: `Bearer ${userInfo.token}`,

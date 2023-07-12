@@ -23,12 +23,22 @@ import React from "react";
           quality={100}
         />
       </Typography>
-      <Typography component="h4" variant="bold" align="center">
+      <Typography
+        component="h4"
+        variant="bold"
+        align="center"
+        sx={{ color: "white" }}
+      >
         {userInfo && userInfo.email}
       </Typography>
-      <Typography component="p" variant="bold" align="center">
-        {userInfo && userInfo.role}
-      </Typography>
+      {/* <Typography
+        component="p"
+        variant="bold"
+        align="center"
+        sx={{ color: "white" }}
+      >
+        {userInfo && userInfo.name}
+      </Typography> */}
     </Box>
   );
 }
